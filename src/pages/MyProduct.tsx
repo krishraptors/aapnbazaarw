@@ -111,6 +111,39 @@ const biharBoardModes = [
   { title: 'Premium mode', detail: 'Makhana, litchi, and specialty produce for higher-value trade.' },
 ];
 
+const biharBoardMetrics = [
+  {
+    title: 'Board coverage',
+    value: 'Season + mandi',
+    description: 'Built around crop timing, mandi movement, and practical buyer demand instead of a generic product list.',
+  },
+  {
+    title: 'Trade structure',
+    value: 'Bulk to premium',
+    description: 'Supports grain procurement, sabzi trade, and higher-value specialty sourcing inside one Bihar-first board.',
+  },
+  {
+    title: 'District focus',
+    value: '4 core clusters',
+    description: 'Covers Patna, Mithila, Seemanchal, and Magadh or Nalanda type buying patterns with clearer trade logic.',
+  },
+];
+
+const biharRealitySignals = [
+  {
+    title: 'Arrival realism',
+    description: 'Paddy and maize rise after monsoon harvest, wheat and mustard build in Rabi, while makhana and litchi stay seasonal and shorter-window.',
+  },
+  {
+    title: 'Buyer realism',
+    description: 'The board fits wholesalers, flour and grain buyers, fruit traders, sabzi networks, and regional aggregators working on mixed demand.',
+  },
+  {
+    title: 'Operational realism',
+    description: 'It supports listing, discovery, pickup planning, and buyer settlement in a way that feels closer to an actual mandi workflow.',
+  },
+];
+
 const indiaCropCategories = [
   {
     title: 'Cereals and staples',
@@ -188,6 +221,24 @@ const indiaBoardUseCases = [
   {
     title: 'Seller expansion path',
     description: 'Farmer groups, traders, and aggregators from multiple states can fit into one structured board instead of disconnected pages.',
+  },
+];
+
+const indiaBoardMetrics = [
+  {
+    title: 'Marketplace role',
+    value: 'India-ready sourcing',
+    description: 'Shows how GolaMart grows from a Bihar board into a wider national crop marketplace with usable category structure.',
+  },
+  {
+    title: 'Trade composition',
+    value: 'Staples to specialty',
+    description: 'Combines cereals, pulses, oilseeds, vegetables, fruit, fiber, and spices so buyers see real category breadth.',
+  },
+  {
+    title: 'Expansion logic',
+    value: 'Multi-state lanes',
+    description: 'Lets buyers compare regions, seasons, and crop families instead of staying limited to one local market view.',
   },
 ];
 
@@ -734,9 +785,9 @@ export default function MyProduct() {
 
       <section className="pb-16">
         <div className="container px-4">
-          <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
-            <Card className="border-emerald-200/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,253,247,0.96))] shadow-[0_24px_70px_-48px_rgba(22,101,52,0.14)] dark:border-emerald-900/50 dark:bg-[linear-gradient(180deg,rgba(6,24,16,0.98),rgba(8,34,22,0.94))]">
-              <CardContent className="p-6 sm:p-8">
+          <div className="grid gap-6 xl:grid-cols-2 xl:items-stretch">
+            <Card className="h-full border-emerald-200/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,253,247,0.96))] shadow-[0_24px_70px_-48px_rgba(22,101,52,0.14)] dark:border-emerald-900/50 dark:bg-[linear-gradient(180deg,rgba(6,24,16,0.98),rgba(8,34,22,0.94))]">
+              <CardContent className="flex h-full flex-col p-6 sm:p-8">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-700">
@@ -749,6 +800,25 @@ export default function MyProduct() {
                   <div className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
                     Bihar-first UI
                   </div>
+                </div>
+
+                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  {biharBoardMetrics.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-[24px] border border-emerald-200/80 bg-white/92 p-4 dark:border-white/10 dark:bg-white/6"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-300">
+                        {item.title}
+                      </p>
+                      <p className="font-heading mt-2 text-2xl font-semibold text-emerald-950 dark:text-white">
+                        {item.value}
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-emerald-950/75 dark:text-white/74">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="mt-6 grid gap-4">
@@ -883,11 +953,27 @@ export default function MyProduct() {
                     </div>
                   </div>
                 </div>
+
+                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  {biharRealitySignals.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-[24px] border border-emerald-200/80 bg-white/92 p-4 dark:border-white/10 dark:bg-white/6"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-300">
+                        {item.title}
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-emerald-950/80 dark:text-white/78">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-emerald-300/40 bg-[linear-gradient(180deg,#0f3f27,#166534)] text-background shadow-[0_24px_80px_-52px_rgba(22,101,52,0.42)]">
-              <CardContent className="p-6 sm:p-8">
+            <Card className="h-full border-emerald-300/40 bg-[linear-gradient(180deg,#0f3f27,#166534)] text-background shadow-[0_24px_80px_-52px_rgba(22,101,52,0.42)]">
+              <CardContent className="flex h-full flex-col p-6 sm:p-8">
                 <p className="text-sm font-semibold uppercase tracking-[0.22em] text-background/70">
                   India crop map
                 </p>
@@ -896,9 +982,25 @@ export default function MyProduct() {
                 </h2>
                 <p className="mt-3 text-sm leading-6 text-background/75">
                   The board now supports cereal, pulse, oilseed, vegetable, fruit,
-                  specialty, fiber, and spice-style listings so the marketplace can feel
-                  relevant across Bihar and wider India.
+                  specialty, fiber, and spice-style listings so the marketplace feels
+                  relevant across Bihar and wider India with more realistic sourcing logic.
                 </p>
+
+                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  {indiaBoardMetrics.map((item) => (
+                    <div key={item.title} className="rounded-[24px] border border-white/10 bg-white/8 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/68">
+                        {item.title}
+                      </p>
+                      <p className="font-heading mt-2 text-2xl font-semibold text-white">
+                        {item.value}
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-white/72">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
 
                 <div className="mt-6 grid gap-4 md:grid-cols-3">
                   <div className="rounded-[24px] border border-white/10 bg-white/8 p-4">
