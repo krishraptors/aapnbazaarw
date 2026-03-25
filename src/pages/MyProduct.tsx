@@ -144,6 +144,40 @@ const biharRealitySignals = [
   },
 ];
 
+const biharDemandSignals = [
+  {
+    title: 'Patna wheat and atta demand',
+    description: 'Steady procurement interest from flour-linked buyers, grain distributors, and city supply networks.',
+  },
+  {
+    title: 'Purnea maize and paddy movement',
+    description: 'High-volume board activity for buyers who work with storage, bulk pickup, and multi-vehicle dispatch planning.',
+  },
+  {
+    title: 'Mithila specialty window',
+    description: 'Shorter but stronger value cycles around makhana, litchi, and banana for premium or festive buying programs.',
+  },
+  {
+    title: 'Nalanda vegetable turnover',
+    description: 'Faster daily movement for potato, onion, tomato, and mixed sabzi demand tied to retail and local mandi trade.',
+  },
+];
+
+const biharWorkflowSteps = [
+  {
+    title: 'Farmer or trader listing',
+    description: 'Add crop, quantity, grade, mandi, and expected price so the board carries usable market information.',
+  },
+  {
+    title: 'Buyer filtering and shortlist',
+    description: 'Procurement teams filter by crop, season, state, price, and market before raising an order.',
+  },
+  {
+    title: 'Dispatch and settlement flow',
+    description: 'After order confirmation, the board supports pickup planning, buyer communication, and transaction progression.',
+  },
+];
+
 const indiaCropCategories = [
   {
     title: 'Cereals and staples',
@@ -968,6 +1002,65 @@ export default function MyProduct() {
                       </p>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-6 grid gap-4 lg:grid-cols-[1.02fr_0.98fr]">
+                  <div className="rounded-[28px] border border-emerald-200/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(240,253,244,0.92))] p-5 dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(8,34,22,0.94),rgba(10,45,27,0.84))]">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
+                          Demand signals
+                        </p>
+                        <h3 className="font-heading mt-2 text-2xl font-semibold text-emerald-950 dark:text-white">
+                          Practical buyer demand patterns across major Bihar crop lanes
+                        </h3>
+                      </div>
+                      <div className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:bg-white/10 dark:text-emerald-200">
+                        Live realism
+                      </div>
+                    </div>
+
+                    <div className="mt-5 grid gap-3">
+                      {biharDemandSignals.map((item) => (
+                        <div
+                          key={item.title}
+                          className="rounded-[22px] border border-emerald-200/80 bg-white/88 p-4 dark:border-white/10 dark:bg-white/6"
+                        >
+                          <p className="font-heading text-lg font-semibold text-emerald-950 dark:text-white">
+                            {item.title}
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-emerald-950/75 dark:text-white/74">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-[28px] border border-emerald-200/80 bg-white/92 p-5 dark:border-white/10 dark:bg-white/6">
+                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
+                      Board workflow
+                    </p>
+                    <h3 className="font-heading mt-2 text-2xl font-semibold text-emerald-950 dark:text-white">
+                      How this Bihar board works from listing to crop movement
+                    </h3>
+
+                    <div className="mt-5 space-y-3">
+                      {biharWorkflowSteps.map((item) => (
+                        <div
+                          key={item.title}
+                          className="rounded-[22px] border border-emerald-200/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(236,253,245,0.88))] p-4 dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(8,34,22,0.9),rgba(10,45,27,0.82))]"
+                        >
+                          <p className="font-heading text-lg font-semibold text-emerald-950 dark:text-white">
+                            {item.title}
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-emerald-950/75 dark:text-white/74">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
