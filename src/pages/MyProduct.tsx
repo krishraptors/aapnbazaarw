@@ -63,6 +63,54 @@ const biharSeasonBoards = [
   },
 ];
 
+const biharTradeClusters = [
+  {
+    title: 'Patna grain and flour belt',
+    crops: 'White wheat, paddy, maize, chana',
+    description: 'Useful for grain distributors, flour networks, and wholesale procurement desks.',
+  },
+  {
+    title: 'Mithila specialty corridor',
+    crops: 'Makhana, litchi, banana, vegetables',
+    description: 'Good for premium fruit buyers, festive demand, and specialty sourcing programs.',
+  },
+  {
+    title: 'Seemanchal volume movement',
+    crops: 'Paddy, maize, jute, mustard',
+    description: 'Works for bulk buyers looking at large arrivals and transport-linked crop flow.',
+  },
+  {
+    title: 'Magadh and Nalanda fresh board',
+    crops: 'Potato, onion, tomato, cauliflower',
+    description: 'Useful for retail-linked buyers, quick-turn trade, and daily mandi planning.',
+  },
+];
+
+const biharBoardUseCases = [
+  {
+    title: 'Farmer selling desk',
+    description: 'Farmers can list crop, grade, quantity, market, and expected price in a way buyers understand quickly.',
+  },
+  {
+    title: 'Buyer procurement board',
+    description: 'Procurement teams can shortlist crops by season, state, price, and market readiness without jumping across systems.',
+  },
+  {
+    title: 'Dispatch planning board',
+    description: 'Operations teams can move from order capture to pickup, route planning, and buyer settlement with clearer signals.',
+  },
+  {
+    title: 'Season monitoring layer',
+    description: 'The board helps teams see Kharif, Rabi, and specialty crop movement in one place instead of scattered spreadsheets.',
+  },
+];
+
+const biharBoardModes = [
+  { title: 'Procurement mode', detail: 'Bulk grain, pulses, and oilseed sourcing for active buyers.' },
+  { title: 'Retail-linked mode', detail: 'Fast-turn vegetables and fruit discovery for daily demand.' },
+  { title: 'Premium mode', detail: 'Makhana, litchi, and specialty produce for higher-value trade.' },
+];
+
 const indiaCropCategories = [
   {
     title: 'Cereals and staples',
@@ -671,6 +719,22 @@ export default function MyProduct() {
                   ))}
                 </div>
 
+                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  {biharBoardModes.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-[24px] border border-emerald-200/80 bg-white/92 p-4 dark:border-white/10 dark:bg-white/6"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-300">
+                        {item.title}
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-emerald-950/80 dark:text-white/78">
+                        {item.detail}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
                 <div className="mt-6 grid gap-4 lg:grid-cols-[1.02fr_0.98fr]">
                   <div className="rounded-[28px] border border-emerald-200/80 bg-white/92 p-5 dark:border-emerald-900/50 dark:bg-white/6">
                     <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
@@ -697,6 +761,70 @@ export default function MyProduct() {
                         <div key={item} className="flex items-start gap-3 rounded-2xl bg-white/8 px-4 py-3">
                           <div className="mt-1 h-2.5 w-2.5 rounded-full bg-lime-300" />
                           <p className="text-sm leading-6 text-white/82">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid gap-4 lg:grid-cols-[1.04fr_0.96fr]">
+                  <div className="rounded-[28px] border border-emerald-200/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(240,253,244,0.9))] p-5 dark:border-emerald-900/50 dark:bg-[linear-gradient(180deg,rgba(8,34,22,0.94),rgba(10,45,27,0.88))]">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
+                          Bihar trade clusters
+                        </p>
+                        <h3 className="font-heading mt-2 text-2xl font-semibold">
+                          Zone-wise board coverage for real mandi and buyer movement
+                        </h3>
+                      </div>
+                      <div className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:bg-white/10 dark:text-emerald-200">
+                        Board depth
+                      </div>
+                    </div>
+
+                    <div className="mt-5 grid gap-3">
+                      {biharTradeClusters.map((item) => (
+                        <div
+                          key={item.title}
+                          className="rounded-[22px] border border-emerald-200/80 bg-white/85 p-4 dark:border-white/10 dark:bg-white/6"
+                        >
+                          <div className="flex flex-wrap items-center justify-between gap-3">
+                            <p className="font-heading text-lg font-semibold text-emerald-950 dark:text-white">
+                              {item.title}
+                            </p>
+                            <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 dark:bg-white/10 dark:text-emerald-200">
+                              {item.crops}
+                            </span>
+                          </div>
+                          <p className="mt-2 text-sm leading-6 text-emerald-950/75 dark:text-white/74">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-[28px] border border-emerald-200/80 bg-white/92 p-5 dark:border-emerald-900/50 dark:bg-white/6">
+                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-700 dark:text-emerald-300">
+                      Board use cases
+                    </p>
+                    <h3 className="font-heading mt-2 text-2xl font-semibold">
+                      Clear ways this Bihar board helps farmers, buyers, and ops teams
+                    </h3>
+
+                    <div className="mt-5 space-y-3">
+                      {biharBoardUseCases.map((item) => (
+                        <div
+                          key={item.title}
+                          className="rounded-[22px] border border-emerald-200/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(236,253,245,0.88))] p-4 dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(8,34,22,0.9),rgba(10,45,27,0.82))]"
+                        >
+                          <p className="font-heading text-lg font-semibold text-emerald-950 dark:text-white">
+                            {item.title}
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-emerald-950/75 dark:text-white/74">
+                            {item.description}
+                          </p>
                         </div>
                       ))}
                     </div>

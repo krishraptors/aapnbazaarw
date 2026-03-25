@@ -27,6 +27,9 @@ const solutionCategories = [
     title: 'App and Platform Engineering',
     tag: 'Android, iOS, web, ecommerce',
     description: 'Product builds for startups, enterprise teams, marketplaces, and digital operations.',
+    highlights: ['Mobile apps', 'Web platforms', 'Commerce systems'],
+    coverage: ['Customer mobile apps', 'Seller and admin panels', 'Dashboards and portals', 'Marketplace workflows'],
+    result: 'Best when the business needs one team to design, build, launch, and improve the full product layer.',
     icon: Smartphone,
   },
   {
@@ -34,6 +37,9 @@ const solutionCategories = [
     title: 'AI and Automation',
     tag: 'Agentic AI, SLM, copilots',
     description: 'Task-driven AI systems, retrieval workflows, and automation layers inside real products.',
+    highlights: ['AI assistants', 'Workflow automation', 'Private intelligence layers'],
+    coverage: ['Support copilots', 'Domain retrieval', 'Internal automation', 'Operational decision flows'],
+    result: 'Best when AI needs to be tied to actual business workflows instead of being left as a demo feature.',
     icon: Bot,
   },
   {
@@ -41,6 +47,9 @@ const solutionCategories = [
     title: 'Cloud and IT Infrastructure',
     tag: 'Cloud, infra, deployment',
     description: 'Cloud strategy, hosting, environment setup, and infrastructure modernization.',
+    highlights: ['Cloud setup', 'Deployment ownership', 'Infrastructure upgrades'],
+    coverage: ['Hosting architecture', 'Release environments', 'API integrations', 'Legacy modernization'],
+    result: 'Best when the company needs stronger technical foundations, rollout discipline, and cleaner infrastructure ownership.',
     icon: CloudCog,
   },
   {
@@ -48,6 +57,9 @@ const solutionCategories = [
     title: 'Security and Managed IT',
     tag: 'Security, support, continuity',
     description: 'Cyber security, network readiness, managed support, and technical continuity.',
+    highlights: ['Security posture', 'Managed support', 'Long-term continuity'],
+    coverage: ['Access and protection', 'Network hardening', 'Technical continuity', 'Managed service coverage'],
+    result: 'Best when teams want dependable support, lower operational risk, and long-term technical continuity.',
     icon: ShieldCheck,
   },
 ];
@@ -58,31 +70,49 @@ const solutionGroups = [
     eyebrow: 'Solution Category 01',
     title: 'App, website, and marketplace development for every digital business layer.',
     description:
-      'This capability block is focused on product engineering. It covers mobile apps, websites, web applications, ecommerce systems, dashboards, and custom product builds.',
+      'This category is about product engineering in plain business terms. It covers mobile apps, websites, web applications, ecommerce systems, dashboards, and custom platforms built to help a company launch, operate, and scale faster.',
     accentClassName: 'text-secondary',
+    summaryPoints: [
+      'Good fit for startups, internal tools, marketplaces, and digital operations.',
+      'Covers design, engineering, release planning, and practical backend integration.',
+      'Works for customer-facing products as well as admin, seller, and workflow systems.',
+    ],
+    coverageBands: ['Android and iOS apps', 'Corporate and campaign websites', 'Web apps and dashboards', 'B2B and B2C marketplaces'],
+    outcomes: [
+      'Moves businesses from idea or outdated stack into a launch-ready product layer.',
+      'Keeps UI, backend, integrations, and commercial workflows in one delivery stream.',
+    ],
     cards: [
       {
         icon: Smartphone,
         title: 'Android App Development',
-        description: 'Build Android apps for commerce, field operations, logistics, and customer products.',
+        description: 'Build Android apps for commerce, field operations, logistics, and customer-facing products.',
+        fit: 'Best for operations apps, retail products, and field teams.',
+        useCases: ['Sales and ordering apps', 'Logistics and field operations'],
         points: ['Kotlin or cross-platform delivery', 'Play Store release support', 'Scalable backend integration'],
       },
       {
         icon: Smartphone,
         title: 'iOS Development',
-        description: 'Ship polished iPhone and iPad experiences with premium UI and strong performance.',
+        description: 'Ship polished iPhone and iPad experiences with premium UI, strong performance, and launch-ready quality.',
+        fit: 'Best for premium consumer products and founder-led launches.',
+        useCases: ['Consumer product launches', 'Premium mobile journeys'],
         points: ['Swift-ready product delivery', 'App Store launch support', 'Premium mobile UX'],
       },
       {
         icon: Globe2,
         title: 'Website Development',
-        description: 'Corporate websites, startup landing pages, portals, and high-conversion web experiences.',
+        description: 'Build corporate websites, startup landing pages, portals, and high-conversion web experiences that explain the business clearly.',
+        fit: 'Best for brand visibility, lead generation, and enterprise presence.',
+        useCases: ['Corporate visibility', 'Campaign and lead generation'],
         points: ['Brand-led web presence', 'Modern frontend architecture', 'Performance-focused execution'],
       },
       {
         icon: ShoppingCart,
         title: 'Web App and Ecommerce Platforms',
-        description: 'Custom dashboards, ecommerce builds, seller panels, and marketplace ecosystems.',
+        description: 'Develop custom dashboards, ecommerce builds, seller panels, buyer journeys, and marketplace ecosystems.',
+        fit: 'Best for B2B, B2C, marketplace, and catalog-heavy business models.',
+        useCases: ['Commerce operations', 'Seller and admin ecosystems'],
         points: ['B2B and B2C commerce', 'Marketplace operations', 'Custom admin and catalog workflows'],
       },
     ],
@@ -92,31 +122,49 @@ const solutionGroups = [
     eyebrow: 'Solution Category 02',
     title: 'Agentic AI, SLM integration, and automation systems for product and operations teams.',
     description:
-      'This block presents the company as a strong AI product and automation partner. It covers copilots, agentic workflows, private AI systems, product intelligence, and process automation.',
+      'This category presents the company as a practical AI and automation partner. It covers copilots, agentic workflows, private AI systems, domain intelligence, and process automation that support real teams instead of staying as demos.',
     accentClassName: 'text-primary',
+    summaryPoints: [
+      'Built for teams that want AI tied to actual workflows, documents, approvals, and support.',
+      'Works for internal automation, customer support, research flows, and domain assistants.',
+      'Combines product thinking, system integration, and operational rollout support.',
+    ],
+    coverageBands: ['Agentic workflows', 'SLM and private AI', 'Automation chains', 'Product and UX clarity'],
+    outcomes: [
+      'Turns AI into a usable business system with clear ownership, workflow fit, and rollout logic.',
+      'Helps teams reduce manual work while keeping the product experience understandable for users.',
+    ],
     cards: [
       {
         icon: Bot,
         title: 'Agentic AI Systems',
-        description: 'Deploy task-driven agents that automate work, improve response time, and unlock new workflows.',
+        description: 'Deploy task-driven agents that automate work, improve response time, and unlock new workflows across products and operations.',
+        fit: 'Best for support, internal ops, repetitive workflows, and task automation.',
+        useCases: ['Internal copilots', 'Task automation desks'],
         points: ['Ops automation', 'Support copilots', 'Task-based workflow orchestration'],
       },
       {
         icon: Cpu,
         title: 'SLM and AI Integration',
-        description: 'Bring focused language models, retrieval pipelines, and domain assistants into products.',
+        description: 'Bring focused language models, retrieval pipelines, and domain assistants into products without overcomplicating the stack.',
+        fit: 'Best for private AI, domain search, and business-specific assistants.',
+        useCases: ['Knowledge assistants', 'Private business AI'],
         points: ['Private AI deployment', 'RAG and domain retrieval', 'Business system integration'],
       },
       {
         icon: Workflow,
         title: 'Workflow Automation',
-        description: 'Connect products, APIs, internal systems, and approval chains into cleaner automated operations.',
+        description: 'Connect products, APIs, internal systems, and approval chains into cleaner automated operations with fewer manual handoffs.',
+        fit: 'Best for approvals, CRM flows, internal tools, and system-to-system execution.',
+        useCases: ['Approvals and CRM flows', 'API and ops handoffs'],
         points: ['Cross-system automation', 'Operational efficiency', 'Reduced manual handoffs'],
       },
       {
         icon: Layers3,
         title: 'Product Management and UX',
-        description: 'Support roadmap definition, requirement shaping, user experience design, and launch clarity.',
+        description: 'Support roadmap definition, requirement shaping, user experience design, and launch clarity so teams move faster with less confusion.',
+        fit: 'Best for founders, product teams, and businesses refining what to build next.',
+        useCases: ['Discovery and roadmap shaping', 'Launch-ready user flows'],
         points: ['Product discovery', 'Feature prioritization', 'UX flow architecture'],
       },
     ],
@@ -126,31 +174,49 @@ const solutionGroups = [
     eyebrow: 'Solution Category 03',
     title: 'Cloud, infrastructure, deployment, and enterprise technology modernization.',
     description:
-      'This section is closer to the Arrow-style enterprise solutions structure. It presents broader IT readiness beyond app development, including cloud, infrastructure, deployment, and data-center-aligned execution.',
+      'This category moves beyond product builds and into wider IT readiness. It covers cloud, infrastructure, deployment, integration, and modernization work for businesses that need stronger technical foundations.',
     accentClassName: 'text-secondary',
+    summaryPoints: [
+      'Good fit for migrations, rollout planning, environment setup, and system modernization.',
+      'Covers infrastructure planning as well as release, integration, and reliability work.',
+      'Helps businesses move from scattered systems to cleaner technical ownership.',
+    ],
+    coverageBands: ['Cloud readiness', 'Infrastructure planning', 'Release and integration', 'Legacy modernization'],
+    outcomes: [
+      'Gives businesses a stronger operating base for product launches, internal systems, and future scale.',
+      'Reduces technical sprawl by bringing hosting, deployment, integration, and modernization into one plan.',
+    ],
     cards: [
       {
         icon: CloudCog,
         title: 'Cloud Services',
-        description: 'Cloud migration, hosting architecture, environment design, and multi-stage deployment planning.',
+        description: 'Cloud migration, hosting architecture, environment design, and multi-stage deployment planning for stable growth.',
+        fit: 'Best for migrations, scaling plans, and production-ready hosting setups.',
+        useCases: ['Cloud migration programs', 'Production hosting design'],
         points: ['Cloud readiness', 'Deployment architecture', 'Operational resilience'],
       },
       {
         icon: Server,
         title: 'Data Center and Infrastructure',
-        description: 'Infrastructure planning, compute foundations, hosting strategy, and modernization support.',
+        description: 'Infrastructure planning, compute foundations, hosting strategy, and modernization support for evolving systems.',
+        fit: 'Best for enterprises upgrading core environments and technical reliability.',
+        useCases: ['Compute and hosting planning', 'Core environment upgrades'],
         points: ['Infrastructure planning', 'Hosting and compute support', 'Modernization pathways'],
       },
       {
         icon: DatabaseZap,
         title: 'Integration and Deployment',
-        description: 'Third-party integrations, release management, system setup, and environment provisioning.',
+        description: 'Handle third-party integrations, release management, system setup, and environment provisioning in a cleaner way.',
+        fit: 'Best for API-heavy stacks, release ownership, and connected business systems.',
+        useCases: ['Release and rollout ownership', 'Connected system delivery'],
         points: ['API integration', 'Deployment pipelines', 'Release and environment ownership'],
       },
       {
         icon: Building2,
         title: 'Infrastructure Modernization',
-        description: 'Refresh legacy stacks, improve technical reliability, and move businesses onto stronger foundations.',
+        description: 'Refresh legacy stacks, improve technical reliability, and move businesses onto stronger, easier-to-manage foundations.',
+        fit: 'Best for rescue work, upgrades, and replacing fragile older systems.',
+        useCases: ['Legacy rescue projects', 'Reliability-led upgrades'],
         points: ['Legacy upgrades', 'Reliability improvements', 'Operational modernization'],
       },
     ],
@@ -160,31 +226,49 @@ const solutionGroups = [
     eyebrow: 'Solution Category 04',
     title: 'Cyber security, managed IT services, communication systems, and technical continuity.',
     description:
-      'This category rounds out the wider IT partner story with security, support, managed operations, network readiness, and end-user technical environments.',
+      'This category rounds out the wider IT partner story with security, support, managed operations, network readiness, and end-user technical environments that keep day-to-day systems dependable.',
     accentClassName: 'text-primary',
+    summaryPoints: [
+      'Useful for businesses that need more than one-time builds and want steady technical continuity.',
+      'Combines security, managed support, and communication environment planning.',
+      'Built to support uptime, safer operations, and long-term ownership.',
+    ],
+    coverageBands: ['Cyber protection', 'Network security', 'Managed support', 'Communication environments'],
+    outcomes: [
+      'Supports day-to-day continuity so internal teams are not left alone after launch or migration.',
+      'Improves protection, stability, and operational response across products and wider IT systems.',
+    ],
     cards: [
       {
         icon: LockKeyhole,
         title: 'Cyber Security Solutions',
-        description: 'Security posture design, access control, protection architecture, and safer digital operations.',
+        description: 'Security posture design, access control, protection architecture, and safer digital operations across products and IT systems.',
+        fit: 'Best for growing teams that need stronger protection and lower operational risk.',
+        useCases: ['Security posture upgrades', 'Access and protection layers'],
         points: ['Risk reduction', 'Secure architecture', 'Operational safeguards'],
       },
       {
         icon: Network,
         title: 'Network Security',
-        description: 'Protected connectivity, safer internal routing, and secure infrastructure design for enterprises.',
+        description: 'Protected connectivity, safer internal routing, and secure infrastructure design for enterprises with operational exposure.',
+        fit: 'Best for offices, distributed teams, and infrastructure-led security upgrades.',
+        useCases: ['Office and branch security', 'Protected internal routing'],
         points: ['Protected connectivity', 'Secure routing', 'Enterprise safeguards'],
       },
       {
         icon: MonitorCog,
         title: 'IT Managed Services',
-        description: 'Support, maintenance, monitoring, continuity workflows, and long-term technical ownership.',
+        description: 'Support, maintenance, monitoring, continuity workflows, and long-term technical ownership that reduce internal pressure.',
+        fit: 'Best for businesses that need an external technical team to stay close over time.',
+        useCases: ['Monitoring and maintenance', 'Continuity-led support models'],
         points: ['Monitoring and maintenance', 'Continuity support', 'Managed technical execution'],
       },
       {
         icon: RadioTower,
         title: 'Unified Communication and EUC',
-        description: 'Communication tooling, collaboration systems, workstation environments, and business productivity layers.',
+        description: 'Communication tooling, collaboration systems, workstation environments, and business productivity layers for smoother internal operations.',
+        fit: 'Best for collaboration upgrades, internal systems, and end-user enablement.',
+        useCases: ['Team collaboration environments', 'End-user productivity systems'],
         points: ['Team collaboration systems', 'End user computing', 'Internal enablement environments'],
       },
     ],
@@ -258,6 +342,30 @@ const positioningCoverage = [
   'Integration, support, and managed execution',
 ];
 
+const pillarContext = [
+  'Each category is written in simpler language so buyers quickly understand what is covered.',
+  'The cards now hold more context, so the layout feels filled and balanced instead of airy.',
+  'The structure is still enterprise-focused, but it reads like human business language.',
+];
+
+const positioningNotes = [
+  {
+    title: 'Enterprise delivery model',
+    description:
+      'The structure is shaped to show category clarity, real coverage, and stronger technical ownership instead of generic agency wording.',
+  },
+  {
+    title: 'Why companies stay long-term',
+    description:
+      'Businesses keep this kind of partner close when they need product builds, architecture decisions, rollout support, and post-launch continuity from one team.',
+  },
+  {
+    title: 'Plain language, stronger trust',
+    description:
+      'The content is intentionally simpler and more human so founders, operators, and enterprise buyers can quickly understand what is being offered.',
+  },
+];
+
 export default function ServicesShowcase() {
   return (
     <section id="solutions" className="scroll-mt-28 relative overflow-hidden py-20 xl:py-32">
@@ -296,7 +404,7 @@ export default function ServicesShowcase() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="grid gap-8 xl:grid-cols-[0.82fr_1.18fr]">
+              <div className="grid gap-8 xl:grid-cols-[0.82fr_1.18fr]">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary/80">
                 Clear Coverage
@@ -309,6 +417,17 @@ export default function ServicesShowcase() {
                 clear enterprise solution lanes. The text stays dark and readable in light mode,
                 and it keeps strong contrast in dark mode.
               </p>
+
+              <div className="mt-6 space-y-3">
+                {pillarContext.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -351,6 +470,27 @@ export default function ServicesShowcase() {
               </div>
               <h3 className="font-heading mt-5 text-xl font-semibold text-slate-950 dark:text-white">{category.title}</h3>
               <p className="mt-3 text-sm leading-6 text-slate-700 dark:text-slate-300">{category.description}</p>
+              <div className="mt-5 space-y-2">
+                {category.highlights.map((item) => (
+                  <div key={item} className="flex items-center gap-3 text-sm">
+                    <div className="h-2.5 w-2.5 rounded-full bg-secondary" />
+                    <span className="text-slate-900 dark:text-slate-100">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {category.coverage.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+                {category.result}
+              </div>
               <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-secondary">
                 Open category
                 <PackageCheck className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -425,7 +565,7 @@ export default function ServicesShowcase() {
               viewport={{ once: true }}
             >
               <div className="grid gap-8 xl:grid-cols-[0.78fr_1.22fr]">
-                <div>
+                <div className="space-y-5">
                   <p className={`text-sm font-semibold uppercase tracking-[0.24em] ${group.accentClassName}`}>
                     {group.eyebrow}
                   </p>
@@ -433,6 +573,40 @@ export default function ServicesShowcase() {
                     {group.title}
                   </h3>
                   <p className="mt-4 text-base leading-7 text-slate-700 dark:text-slate-300">{group.description}</p>
+
+                  <div className="space-y-3">
+                    {group.summaryPoints.map((point) => (
+                      <div
+                        key={point}
+                        className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 dark:border-white/10 dark:bg-white/5"
+                      >
+                        <div className="mt-1 h-2.5 w-2.5 rounded-full bg-primary" />
+                        <p className="text-sm leading-6 text-slate-700 dark:text-slate-300">{point}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    {group.coverageBands.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="space-y-3">
+                    {group.outcomes.map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl border border-slate-200 bg-white px-4 py-4 dark:border-white/10 dark:bg-white/5"
+                      >
+                        <p className="text-sm leading-6 text-slate-700 dark:text-slate-300">{item}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -463,6 +637,21 @@ export default function ServicesShowcase() {
                               </div>
                             ))}
                           </div>
+
+                          <div className="mt-6 flex flex-wrap gap-2">
+                            {card.useCases.map((item) => (
+                              <span
+                                key={item}
+                                className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-slate-300"
+                              >
+                                {item}
+                              </span>
+                            ))}
+                          </div>
+
+                          <div className="mt-6 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 dark:border-white/10 dark:bg-slate-900/70 dark:text-slate-200">
+                            {card.fit}
+                          </div>
                         </CardContent>
                       </Card>
                     </motion.div>
@@ -483,18 +672,34 @@ export default function ServicesShowcase() {
           <div className="rounded-[36px] border border-slate-200/90 bg-white/95 p-6 text-slate-950 shadow-[0_24px_80px_-52px_rgba(15,23,42,0.28)] backdrop-blur sm:p-8 dark:border-white/10 dark:bg-slate-950/75 dark:text-white">
             <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr]">
               <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-secondary/80">
-                Global IT Solutions Positioning
-              </p>
-              <h3 className="font-heading mt-2 text-3xl font-semibold text-slate-950 dark:text-white">
-                Designed to look less like a basic agency and more like a serious technology partner
-              </h3>
-              <p className="mt-3 text-base leading-7 text-slate-700 dark:text-slate-300">
-                The solutions structure now covers app development, iOS development,
-                website development, AI systems, cloud services, infrastructure, cyber
-                security, integration, support, and long-term managed execution in one
-                stronger enterprise layout.
-              </p>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-secondary/80">
+                  Global IT Solutions Positioning
+                </p>
+                <h3 className="font-heading mt-2 text-3xl font-semibold text-slate-950 dark:text-white">
+                  Designed to look less like a basic agency and more like a serious technology partner
+                </h3>
+                <p className="mt-3 text-base leading-7 text-slate-700 dark:text-slate-300">
+                  The solutions structure now covers app development, iOS development,
+                  website development, AI systems, cloud services, infrastructure, cyber
+                  security, integration, support, and long-term managed execution in one
+                  stronger enterprise layout.
+                </p>
+
+                <div className="mt-6 space-y-3">
+                  {positioningNotes.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 dark:border-white/10 dark:bg-white/5"
+                    >
+                      <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 dark:text-white">
+                        {item.title}
+                      </h4>
+                      <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
