@@ -8,7 +8,6 @@ import {
   Globe2,
   Layers3,
   LockKeyhole,
-  MessageSquareMore,
   MonitorCog,
   Network,
   PackageCheck,
@@ -205,13 +204,67 @@ const deliveryModels = [
   'Long-term technical support and modernization',
 ];
 
+const enterpriseCoverage = [
+  {
+    icon: Smartphone,
+    title: 'Android App Development',
+    description: 'Consumer apps, internal tools, field apps, and operational mobile systems.',
+  },
+  {
+    icon: Smartphone,
+    title: 'iOS Development',
+    description: 'Premium iPhone and iPad products with launch-ready UI and performance.',
+  },
+  {
+    icon: Globe2,
+    title: 'Website Development',
+    description: 'Corporate websites, landing pages, portals, and conversion-focused web presence.',
+  },
+  {
+    icon: Bot,
+    title: 'AI Systems',
+    description: 'Agentic workflows, copilots, retrieval systems, and private AI layers.',
+  },
+  {
+    icon: CloudCog,
+    title: 'Cloud Services',
+    description: 'Cloud setup, migrations, deployments, hosting, and environment architecture.',
+  },
+  {
+    icon: Network,
+    title: 'Infrastructure',
+    description: 'Infrastructure planning, hosting strategy, network readiness, and modernization.',
+  },
+  {
+    icon: LockKeyhole,
+    title: 'Cyber Security',
+    description: 'Secure architecture, access control, protection layers, and safer operations.',
+  },
+  {
+    icon: MonitorCog,
+    title: 'Support and Managed IT',
+    description: 'Ongoing support, monitoring, maintenance, and long-term technical ownership.',
+  },
+];
+
+const positioningCoverage = [
+  'App development',
+  'iOS development',
+  'Website development',
+  'AI systems and agentic workflows',
+  'Cloud and deployment services',
+  'Infrastructure modernization',
+  'Cyber security and network protection',
+  'Integration, support, and managed execution',
+];
+
 export default function ServicesShowcase() {
   return (
     <section id="solutions" className="scroll-mt-28 relative overflow-hidden py-20 xl:py-32">
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,hsl(var(--foreground)),hsl(var(--foreground)/0.96)_38%,hsl(var(--background))_100%)]" />
-      <div className="surface-grid absolute inset-0 opacity-15" />
-      <div className="pointer-events-none absolute left-[6%] top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl" />
-      <div className="pointer-events-none absolute right-[8%] bottom-10 h-60 w-60 rounded-full bg-secondary/15 blur-3xl" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,250,252,0.98),rgba(255,255,255,1)_34%,rgba(241,245,249,0.96)_100%)] dark:bg-[linear-gradient(180deg,rgba(6,10,21,0.98),rgba(11,17,33,0.98)_40%,rgba(8,12,25,0.98)_100%)]" />
+      <div className="surface-grid absolute inset-0 opacity-30 dark:opacity-15" />
+      <div className="pointer-events-none absolute left-[6%] top-16 h-44 w-44 rounded-full bg-primary/12 blur-3xl" />
+      <div className="pointer-events-none absolute right-[8%] bottom-10 h-60 w-60 rounded-full bg-secondary/14 blur-3xl" />
 
       <div className="container relative px-4">
         <motion.div
@@ -221,19 +274,62 @@ export default function ServicesShowcase() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/10 px-4 py-2 text-sm font-semibold text-secondary backdrop-blur">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/90 px-4 py-2 text-sm font-semibold text-primary shadow-sm backdrop-blur dark:bg-white/10 dark:text-secondary">
             <Sparkles className="h-4 w-4" />
             Enterprise-grade solutions
           </div>
-          <h2 className="font-heading mb-4 text-3xl font-bold text-background xl:text-5xl">
+          <h2 className="font-heading mb-4 text-3xl font-bold text-slate-950 dark:text-white xl:text-5xl">
             Solutions arranged like
             <span className="gradient-text"> a real IT capability portfolio</span>
           </h2>
-          <p className="text-lg text-background/68">
+          <p className="text-lg text-slate-700 dark:text-slate-300">
             The solutions section now opens like an enterprise catalog. It groups mobile,
             web, AI, cloud, infrastructure, security, and managed technology delivery
             into clearer categories instead of a flat service list.
           </p>
+        </motion.div>
+
+        <motion.div
+          className="mb-8 rounded-[36px] border border-slate-200/90 bg-white/95 p-6 shadow-[0_28px_90px_-54px_rgba(15,23,42,0.32)] backdrop-blur sm:p-8 dark:border-white/10 dark:bg-slate-950/75 dark:shadow-[0_28px_90px_-54px_rgba(0,0,0,0.72)]"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="grid gap-8 xl:grid-cols-[0.82fr_1.18fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary/80">
+                Clear Coverage
+              </p>
+              <h3 className="font-heading mt-3 text-3xl font-semibold leading-tight text-slate-950 dark:text-white">
+                A stronger solutions layout that clearly shows what your IT team can deliver.
+              </h3>
+              <p className="mt-4 text-base leading-7 text-slate-700 dark:text-slate-300">
+                Instead of one vague agency paragraph, this section now breaks the company into
+                clear enterprise solution lanes. The text stays dark and readable in light mode,
+                and it keeps strong contrast in dark mode.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {enterpriseCoverage.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-[28px] border border-slate-200 bg-slate-50/95 p-5 shadow-sm dark:border-white/10 dark:bg-white/5"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary dark:bg-primary/15">
+                    <item.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-heading mt-4 text-lg font-semibold text-slate-950 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -241,21 +337,21 @@ export default function ServicesShowcase() {
             <motion.a
               key={category.id}
               href={`#${category.id}`}
-              className="group rounded-[30px] border border-background/10 bg-background/8 p-5 text-background backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:bg-background/12"
+              className="group rounded-[30px] border border-slate-200/90 bg-white/95 p-5 text-slate-950 shadow-[0_18px_60px_-42px_rgba(15,23,42,0.28)] backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_22px_70px_-42px_rgba(37,99,235,0.22)] dark:border-white/10 dark:bg-slate-950/75 dark:text-white dark:shadow-[0_18px_60px_-42px_rgba(0,0,0,0.72)]"
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
               viewport={{ once: true }}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-background/10 text-secondary transition-transform duration-500 group-hover:scale-110">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform duration-500 group-hover:scale-110 dark:bg-primary/15">
                 <category.icon className="h-6 w-6" />
               </div>
-              <div className="mt-5 rounded-full bg-background/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-background/62">
+              <div className="mt-5 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-700 dark:bg-white/10 dark:text-slate-300">
                 {category.tag}
               </div>
-              <h3 className="font-heading mt-5 text-xl font-semibold">{category.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-background/70">{category.description}</p>
-              <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary">
+              <h3 className="font-heading mt-5 text-xl font-semibold text-slate-950 dark:text-white">{category.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-700 dark:text-slate-300">{category.description}</p>
+              <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-secondary">
                 Open category
                 <PackageCheck className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </div>
@@ -270,15 +366,15 @@ export default function ServicesShowcase() {
           transition={{ duration: 0.6, delay: 0.12 }}
           viewport={{ once: true }}
         >
-          <div className="rounded-[32px] border border-background/10 bg-background/6 p-6 text-background backdrop-blur sm:p-8">
-            <div className="inline-flex items-center gap-2 rounded-full bg-background/10 px-4 py-2 text-sm font-semibold text-secondary">
+          <div className="rounded-[32px] border border-slate-200/90 bg-white/95 p-6 text-slate-950 shadow-[0_24px_80px_-52px_rgba(15,23,42,0.28)] backdrop-blur sm:p-8 dark:border-white/10 dark:bg-slate-950/75 dark:text-white">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary dark:bg-white/10 dark:text-secondary">
               <ShieldCheck className="h-4 w-4" />
               Solution Architecture
             </div>
-            <h3 className="font-heading mt-6 text-3xl font-semibold leading-tight">
+            <h3 className="font-heading mt-6 text-3xl font-semibold leading-tight text-slate-950 dark:text-white">
               Product engineering on one side, enterprise IT capability on the other.
             </h3>
-            <p className="mt-4 text-base leading-7 text-background/72">
+            <p className="mt-4 text-base leading-7 text-slate-700 dark:text-slate-300">
               The structure takes cues from enterprise solution firms: digital product
               builds, AI systems, cloud and infrastructure, security, support, and wider
               IT modernization all presented as one coherent solutions portfolio.
@@ -288,27 +384,27 @@ export default function ServicesShowcase() {
               {solutionSignals.map((signal) => (
                 <div
                   key={signal}
-                  className="flex items-start gap-3 rounded-2xl border border-background/10 bg-background/8 px-4 py-3"
+                  className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 dark:border-white/10 dark:bg-white/5"
                 >
                   <div className="mt-1 h-2.5 w-2.5 rounded-full bg-primary" />
-                  <p className="text-sm leading-6 text-background/72">{signal}</p>
+                  <p className="text-sm leading-6 text-slate-700 dark:text-slate-300">{signal}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-[32px] border border-background/10 bg-background p-6 text-foreground shadow-[0_24px_80px_-52px_hsl(var(--foreground)/0.65)] sm:p-8">
+          <div className="rounded-[32px] border border-slate-200/90 bg-white/95 p-6 text-slate-950 shadow-[0_24px_80px_-52px_rgba(15,23,42,0.28)] sm:p-8 dark:border-white/10 dark:bg-slate-950/75 dark:text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary/80">
               Delivery Models
             </p>
-            <h3 className="font-heading mt-2 text-2xl font-semibold">
+            <h3 className="font-heading mt-2 text-2xl font-semibold text-slate-950 dark:text-white">
               Built for product launches, long-term support, and full technical ownership
             </h3>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {deliveryModels.map((item) => (
                 <div
                   key={item}
-                  className="rounded-2xl border border-border/70 bg-muted/35 px-4 py-4 text-sm font-medium"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm font-medium text-slate-900 dark:border-white/10 dark:bg-white/5 dark:text-slate-100"
                 >
                   {item}
                 </div>
@@ -322,7 +418,7 @@ export default function ServicesShowcase() {
             <motion.div
               key={group.id}
               id={group.id}
-              className="scroll-mt-32 rounded-[36px] border border-background/10 bg-background/6 p-6 text-background backdrop-blur sm:p-8"
+              className="scroll-mt-32 rounded-[36px] border border-slate-200/90 bg-white/95 p-6 text-slate-950 shadow-[0_24px_80px_-52px_rgba(15,23,42,0.28)] backdrop-blur sm:p-8 dark:border-white/10 dark:bg-slate-950/75 dark:text-white"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: groupIndex * 0.08 }}
@@ -333,10 +429,10 @@ export default function ServicesShowcase() {
                   <p className={`text-sm font-semibold uppercase tracking-[0.24em] ${group.accentClassName}`}>
                     {group.eyebrow}
                   </p>
-                  <h3 className="font-heading mt-4 text-3xl font-semibold leading-tight">
+                  <h3 className="font-heading mt-4 text-3xl font-semibold leading-tight text-slate-950 dark:text-white">
                     {group.title}
                   </h3>
-                  <p className="mt-4 text-base leading-7 text-background/72">{group.description}</p>
+                  <p className="mt-4 text-base leading-7 text-slate-700 dark:text-slate-300">{group.description}</p>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -348,14 +444,14 @@ export default function ServicesShowcase() {
                       transition={{ duration: 0.45, delay: cardIndex * 0.05 }}
                       viewport={{ once: true }}
                     >
-                      <Card className="h-full border-background/10 bg-background text-foreground shadow-[0_24px_80px_-52px_hsl(var(--foreground)/0.75)]">
+                      <Card className="h-full border-slate-200 bg-slate-50/95 text-slate-950 shadow-[0_20px_60px_-46px_rgba(15,23,42,0.24)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:shadow-[0_20px_60px_-46px_rgba(0,0,0,0.72)]">
                         <CardContent className="p-6 sm:p-7">
                           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                             <card.icon className="h-7 w-7" />
                           </div>
 
-                          <h4 className="font-heading mt-6 text-2xl font-semibold">{card.title}</h4>
-                          <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                          <h4 className="font-heading mt-6 text-2xl font-semibold text-slate-950 dark:text-white">{card.title}</h4>
+                          <p className="mt-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
                             {card.description}
                           </p>
 
@@ -363,7 +459,7 @@ export default function ServicesShowcase() {
                             {card.points.map((point) => (
                               <div key={point} className="flex items-center gap-3 text-sm">
                                 <div className="h-2.5 w-2.5 rounded-full bg-secondary" />
-                                <span className="text-foreground/85">{point}</span>
+                                <span className="text-slate-900 dark:text-slate-100">{point}</span>
                               </div>
                             ))}
                           </div>
@@ -384,20 +480,33 @@ export default function ServicesShowcase() {
           transition={{ duration: 0.6, delay: 0.18 }}
           viewport={{ once: true }}
         >
-          <div className="rounded-[36px] border border-background/10 bg-background/6 p-6 text-background backdrop-blur sm:p-8">
-            <div className="max-w-3xl">
+          <div className="rounded-[36px] border border-slate-200/90 bg-white/95 p-6 text-slate-950 shadow-[0_24px_80px_-52px_rgba(15,23,42,0.28)] backdrop-blur sm:p-8 dark:border-white/10 dark:bg-slate-950/75 dark:text-white">
+            <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr]">
+              <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-secondary/80">
                 Global IT Solutions Positioning
               </p>
-              <h3 className="font-heading mt-2 text-3xl font-semibold">
+              <h3 className="font-heading mt-2 text-3xl font-semibold text-slate-950 dark:text-white">
                 Designed to look less like a basic agency and more like a serious technology partner
               </h3>
-              <p className="mt-3 text-base leading-7 text-background/72">
+              <p className="mt-3 text-base leading-7 text-slate-700 dark:text-slate-300">
                 The solutions structure now covers app development, iOS development,
                 website development, AI systems, cloud services, infrastructure, cyber
                 security, integration, support, and long-term managed execution in one
                 stronger enterprise layout.
               </p>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {positioningCoverage.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm font-medium text-slate-900 dark:border-white/10 dark:bg-white/5 dark:text-slate-100"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
