@@ -1,10 +1,12 @@
 import { Button } from '@/components/ui/button';
 import {
   ArrowRight,
+  Leaf,
   Network,
   PackageCheck,
   ShoppingCart,
   Store,
+  Tractor,
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -21,6 +23,19 @@ const productCategories = [
     className:
       'border-border/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(245,247,250,0.94))]',
     iconClassName: 'bg-primary/10 text-primary',
+  },
+  {
+    id: 'golamart-section',
+    href: '/my-product',
+    title: 'GolaMart',
+    tag: 'Agritech Marketplace',
+    description:
+      'Farm-to-market product line for Indian farmers, buyers, mandis, and procurement teams.',
+    points: ['Crop listings', 'Buyer orders', 'Farmer-first agritech workflows'],
+    icon: Leaf,
+    className:
+      'border-emerald-200/80 bg-[linear-gradient(180deg,rgba(240,253,244,0.98),rgba(220,252,231,0.82))]',
+    iconClassName: 'bg-emerald-100 text-emerald-700',
   },
 ];
 
@@ -78,16 +93,17 @@ export default function MyProductsShowcase() {
             My Products
           </div>
           <h2 className="font-heading mb-4 text-3xl font-bold xl:text-5xl">
-            Product category that opens into
-            <span className="gradient-text"> AapnBazaar</span>
+            Product categories that open into
+            <span className="gradient-text"> AapnBazaar and GolaMart</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            This product section now focuses on the main AapnBazaar marketplace and
-            opens directly into its detailed overview below.
+            This parent section now works like a product catalog. It first presents the
+            two product categories, then opens into the AapnBazaar detail block here
+            while GolaMart continues in its own dedicated section below.
           </p>
         </motion.div>
 
-        <div className="mx-auto grid max-w-3xl gap-4">
+        <div className="grid gap-4 md:grid-cols-2">
           {productCategories.map((product, index) => (
             <motion.a
               key={product.title}
@@ -226,14 +242,15 @@ export default function MyProductsShowcase() {
                           Product Positioning
                         </p>
                         <h4 className="font-heading mt-1 text-2xl font-semibold">
-                          Built as a focused B2B marketplace product
+                          Separate product identity with a dedicated GolaMart section
                         </h4>
                       </div>
                     </div>
                     <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                      This structure keeps the homepage focused on AapnBazaar and its
-                      core wholesale commerce workflows without mixing in other product
-                      features here.
+                      This structure keeps the homepage cleaner. My Products stays as the
+                      parent product layer, AapnBazaar is detailed here, and GolaMart now
+                      gets its own standalone agritech section with a separate visual
+                      identity.
                     </p>
                   </div>
                 </div>
