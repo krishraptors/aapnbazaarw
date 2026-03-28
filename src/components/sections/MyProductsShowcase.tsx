@@ -1,12 +1,11 @@
 import { Button } from '@/components/ui/button';
 import {
   ArrowRight,
-  Leaf,
+  Clock3,
   Network,
   PackageCheck,
   ShoppingCart,
   Store,
-  Tractor,
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -25,17 +24,17 @@ const productCategories = [
     iconClassName: 'bg-primary/10 text-primary',
   },
   {
-    id: 'golamart-section',
-    href: '/my-product',
-    title: 'GolaMart',
-    tag: 'Agritech Marketplace',
+    id: 'coming-soon',
+    title: 'Comming Soon',
+    tag: 'Next Product',
     description:
-      'Farm-to-market product line for Indian farmers, buyers, mandis, and procurement teams.',
-    points: ['Crop listings', 'Buyer orders', 'Farmer-first agritech workflows'],
-    icon: Leaf,
+      'This space is reserved for the next product launch.',
+    points: ['Comming Soon'],
+    icon: Clock3,
     className:
-      'border-emerald-200/80 bg-[linear-gradient(180deg,rgba(240,253,244,0.98),rgba(220,252,231,0.82))]',
-    iconClassName: 'bg-emerald-100 text-emerald-700',
+      'border-border/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(245,247,250,0.94))]',
+    iconClassName: 'bg-secondary/15 text-secondary',
+    isComingSoon: true,
   },
 ];
 
@@ -94,21 +93,19 @@ export default function MyProductsShowcase() {
           </div>
           <h2 className="font-heading mb-4 text-3xl font-bold xl:text-5xl">
             Product categories that open into
-            <span className="gradient-text"> AapnBazaar and GolaMart</span>
+            <span className="gradient-text"> AapnBazaar</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            This parent section now works like a product catalog. It first presents the
-            two product categories, then opens into the AapnBazaar detail block here
-            while GolaMart continues in its own dedicated section below.
+            This parent section highlights AapnBazaar first and keeps the second product
+            slot reserved as a simple coming soon placeholder.
           </p>
         </motion.div>
 
         <div className="grid gap-4 md:grid-cols-2">
           {productCategories.map((product, index) => (
-            <motion.a
+            <motion.div
               key={product.title}
-              href={product.href}
-              className={`group relative overflow-hidden rounded-[32px] border p-6 shadow-[0_24px_80px_-52px_hsl(var(--foreground)/0.45)] transition-all duration-500 hover:-translate-y-1 sm:p-7 ${product.className}`}
+              className={`group relative overflow-hidden rounded-[32px] border p-6 shadow-[0_24px_80px_-52px_hsl(var(--foreground)/0.45)] transition-all duration-500 sm:p-7 ${product.className} ${product.isComingSoon ? '' : 'hover:-translate-y-1'}`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: index * 0.08 }}
@@ -140,15 +137,26 @@ export default function MyProductsShowcase() {
                   ))}
                 </div>
 
-                <div className="mt-8 flex items-center justify-between rounded-2xl border border-border/60 bg-background/60 px-4 py-3 backdrop-blur transition-all duration-500 group-hover:border-primary/30 group-hover:bg-background/80">
-                  <span className="text-sm font-medium text-foreground/80">Open category details</span>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                    View
-                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
+                <div className="mt-8">
+                  {product.isComingSoon ? (
+                    <Button
+                      disabled
+                      className="w-full rounded-full bg-secondary text-secondary-foreground opacity-100 disabled:cursor-default disabled:opacity-100"
+                    >
+                      Comming Soon
+                    </Button>
+                  ) : (
+                    <div className="flex items-center justify-between rounded-2xl border border-border/60 bg-background/60 px-4 py-3 backdrop-blur transition-all duration-500 group-hover:border-primary/30 group-hover:bg-background/80">
+                      <span className="text-sm font-medium text-foreground/80">Open category details</span>
+                      <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                        View
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
 
@@ -242,15 +250,14 @@ export default function MyProductsShowcase() {
                           Product Positioning
                         </p>
                         <h4 className="font-heading mt-1 text-2xl font-semibold">
-                          Separate product identity with a dedicated GolaMart section
+                          Built as a focused B2B marketplace product
                         </h4>
                       </div>
                     </div>
                     <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                      This structure keeps the homepage cleaner. My Products stays as the
-                      parent product layer, AapnBazaar is detailed here, and GolaMart now
-                      gets its own standalone agritech section with a separate visual
-                      identity.
+                      This structure keeps the homepage focused on AapnBazaar and its
+                      core wholesale commerce workflows without mixing in other product
+                      features here.
                     </p>
                   </div>
                 </div>
