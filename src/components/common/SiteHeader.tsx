@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from '@/components/common/ThemeToggle';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 
@@ -67,6 +68,9 @@ export default function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-3 xl:flex">
+            <Button asChild className="rounded-full px-5">
+              <Link to="/aapnbazaar">Open B2B</Link>
+            </Button>
             <ThemeToggle />
           </div>
 
@@ -99,7 +103,12 @@ export default function SiteHeader() {
                 </a>
               ))}
             </nav>
-            <div className="mt-4">
+            <div className="mt-4 space-y-3">
+              <Button asChild className="w-full rounded-full">
+                <Link to="/aapnbazaar" onClick={() => setIsOpen(false)}>
+                  Open B2B
+                </Link>
+              </Button>
               <ThemeToggle className="w-full" />
             </div>
           </div>
