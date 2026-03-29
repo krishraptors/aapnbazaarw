@@ -52,10 +52,10 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Mail className="h-5 w-5 text-primary" />
               <a
-                href="mailto:contact@aapnbazaar.com"
+                href="mailto:kmk@aapnbazaar.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-              contact@aapnbazaar.com
+              kmk@aapnbazaar.com
               </a>
             </div>
           </div>

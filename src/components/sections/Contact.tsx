@@ -64,10 +64,10 @@ export default function Contact() {
                       Send us an email anytime
                     </p>
                     <a
-                      href="mailto:contact@aapnbazaar.com"
+                      href="mailto:kmk@aapnbazaar.com"
                       className="text-primary hover:underline"
                     >
-                      contact@aapnbazaar.com
+                      kmk@aapnbazaar.com
                     </a>
                   </div>
                 </div>

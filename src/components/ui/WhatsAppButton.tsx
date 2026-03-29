@@ -10,8 +10,8 @@ interface WhatsAppButtonProps {
 }
 
 export default function WhatsAppButton({
-  phoneNumber = '919876543210', // Default phone number (replace with actual)
-  message = 'Hello! I would like to know more about Aapnazaar.',
+  phoneNumber = '918294886251',
+  message = 'Hello! I would like to know more about AapnBazaar.',
   className = '',
   variant = 'default',
   size = 'default'
