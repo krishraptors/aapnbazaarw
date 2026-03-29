@@ -131,7 +131,7 @@ export default function Startups() {
   return (
     <>
       <PageMeta
-        title="Startups"
+        title="GoStratups"
         description="Startup support services from incorporation and registrations to banking, compliance, and seed funding readiness."
       />
 
@@ -158,7 +158,7 @@ export default function Startups() {
 
                 <div className="space-y-5">
                   <h1 className="font-heading text-4xl font-bold leading-[0.95] tracking-tight sm:text-5xl xl:text-7xl">
-                    Startups from
+                    GoStratups from
                     <span className="gradient-text mt-3 block">registration to funding readiness</span>
                   </h1>
                   <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground xl:mx-0 xl:text-xl">

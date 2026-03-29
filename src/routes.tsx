@@ -2,6 +2,7 @@ import { lazy, type ComponentType } from 'react';
 
 const Home = lazy(() => import('./pages/Home'));
 const AapnBazaar = lazy(() => import('./pages/AapnBazaar'));
+const GolaMart = lazy(() => import('./pages/GolaMart'));
 const Startups = lazy(() => import('./pages/Startups'));
 const MyProduct = lazy(() => import('./pages/MyProduct'));
 const AdminGolaMart = lazy(() => import('./pages/AdminGolaMart'));
@@ -27,7 +28,13 @@ const routes: RouteConfig[] = [
     visible: true,
   },
   {
-    name: 'Startups',
+    name: 'GolaMart',
+    path: '/golamart',
+    component: GolaMart,
+    visible: true,
+  },
+  {
+    name: 'GoStratups',
     path: '/startups',
     component: Startups,
     visible: true,
