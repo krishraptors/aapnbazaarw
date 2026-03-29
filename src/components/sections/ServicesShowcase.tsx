@@ -12,18 +12,32 @@ const serviceActions = [
     tag: 'Cloud Delivery',
   },
   {
-    title: 'Application Engineering',
+    title: 'Web and App Development',
     description:
-      'Business platforms, client portals, internal systems, and modern web applications built for scale and maintainability.',
+      'Business websites, portals, custom apps, and digital products built for launch, growth, and long-term maintainability.',
     image: '/images/services/application-engineering.svg',
-    tag: 'Product Engineering',
+    tag: 'App Development',
   },
   {
-    title: 'Data, AI and Automation',
+    title: 'iOS and Android Development',
     description:
-      'Workflow automation, analytics pipelines, AI-assisted operations, and practical solutions tied to real business use cases.',
+      'iOS, Android, and cross-platform mobile applications designed for customer journeys, internal tools, and operational use cases.',
+    image: '/images/services/mobile-app.svg',
+    tag: 'iOS & Android',
+  },
+  {
+    title: 'Agentic AI Workflow Systems',
+    description:
+      'Agentic AI systems, copilots, task automation, and workflow orchestration built around real business processes.',
+    image: '/images/services/agentic-workflow.svg',
+    tag: 'Agentic AI',
+  },
+  {
+    title: 'Enterprise Application Engineering',
+    description:
+      'Internal platforms, operational systems, dashboards, and integration-led applications for modern delivery teams.',
     image: '/images/services/ai-trust.svg',
-    tag: 'AI Systems',
+    tag: 'Platform Engineering',
   },
   {
     title: 'Cyber Security and Resilience',
@@ -36,12 +50,13 @@ const serviceActions = [
 
 const serviceCategories = [
   'AWS Architecture',
-  'Application Modernization',
+  'Web Platforms',
+  'App Development',
+  'iOS Development',
+  'Android Development',
+  'Agentic AI Workflows',
   'DevSecOps and CI/CD',
   'Managed Cloud Support',
-  'Data Engineering',
-  'AI Workflow Automation',
-  'Observability and SRE',
   'Network and Security',
 ];
 
@@ -89,12 +104,12 @@ export default function ServicesShowcase() {
             <span className="gradient-text"> modern business delivery</span>
           </h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
-            We provide focused IT services across cloud, engineering, automation,
-            cybersecurity, and managed operations without the filler of an industry directory.
+            We deliver cloud platforms, web and app development, iOS and Android development,
+            agentic AI workflow systems, cybersecurity, and managed technology execution.
           </p>
         </motion.div>
 
-        <div className="grid gap-5 xl:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {serviceActions.map((item, index) => (
             <motion.div
               key={item.title}
@@ -188,31 +203,31 @@ export default function ServicesShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
                 viewport={{ once: true }}
-            >
-              <Card className="h-full border-border/70 bg-background/90 shadow-[0_24px_70px_-50px_hsl(var(--foreground)/0.35)]">
-                <CardContent className="p-5 sm:p-6">
-                  <div className="aspect-[4/3] overflow-hidden rounded-[24px] border border-border/70 bg-muted/40">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h4 className="font-heading mt-5 text-2xl font-semibold">{item.title}</h4>
-                  <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                    {item.description}
-                  </p>
-                  <a
-                    href="/#contact"
-                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary"
-                  >
-                    Learn more
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                </CardContent>
-              </Card>
-            </motion.div>
+              >
+                <Card className="h-full border-border/70 bg-background/90 shadow-[0_24px_70px_-50px_hsl(var(--foreground)/0.35)]">
+                  <CardContent className="p-5 sm:p-6">
+                    <div className="aspect-[4/3] overflow-hidden rounded-[24px] border border-border/70 bg-muted/40">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h4 className="font-heading mt-5 text-2xl font-semibold">{item.title}</h4>
+                    <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                      {item.description}
+                    </p>
+                    <a
+                      href="/#contact"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary"
+                    >
+                      Learn more
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </motion.div>
