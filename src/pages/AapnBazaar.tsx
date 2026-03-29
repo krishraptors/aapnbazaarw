@@ -105,13 +105,13 @@ export default function AapnBazaar() {
         description="Aapnbazaar is India's zero-commission B2B marketplace for direct factory and wholesaler trade."
       />
 
-      <div className="min-h-screen bg-background">
+      <div className="b2b-hero-surface min-h-screen bg-background">
         <section className="relative overflow-hidden pb-20 pt-32 xl:pb-28 xl:pt-36">
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,hsl(var(--background)),hsl(var(--muted)/0.45),hsl(var(--background)))]" />
+          <div className="b2b-hero-surface absolute inset-0" />
           <div className="surface-grid absolute inset-0 opacity-30" />
-          <div className="pointer-events-none absolute left-[8%] top-20 h-52 w-52 rounded-full bg-primary/15 blur-3xl" />
-          <div className="pointer-events-none absolute right-[10%] top-28 h-60 w-60 rounded-full bg-secondary/20 blur-3xl" />
-          <div className="pointer-events-none absolute bottom-10 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl" />
+          <div className="pointer-events-none absolute left-[8%] top-20 h-56 w-56 rounded-full bg-blue-400/15 blur-3xl" />
+          <div className="pointer-events-none absolute right-[10%] top-28 h-64 w-64 rounded-full bg-emerald-300/20 blur-3xl" />
+          <div className="pointer-events-none absolute bottom-10 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-300/10 blur-3xl" />
 
           <div className="container relative px-4">
             <div className="grid items-center gap-14 xl:grid-cols-[1.02fr_0.98fr] xl:gap-16">
@@ -121,7 +121,7 @@ export default function AapnBazaar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/85 px-4 py-2 text-sm font-semibold text-primary backdrop-blur">
+                <div className="inline-flex items-center gap-2 rounded-full border border-sky-400/25 bg-white/80 px-4 py-2 text-sm font-semibold text-sky-700 backdrop-blur dark:border-sky-400/20 dark:bg-white/10 dark:text-sky-300">
                   <CircleDollarSign className="h-4 w-4" />
                   Zero Commission B2B Platform
                 </div>
@@ -139,7 +139,7 @@ export default function AapnBazaar() {
                 </div>
 
                 <div className="flex flex-col justify-center gap-4 sm:flex-row xl:justify-start">
-                  <Button asChild size="lg" className="h-12 rounded-full px-7 text-base">
+                  <Button asChild size="lg" className="h-12 rounded-full bg-[linear-gradient(135deg,#1d4ed8,#14b8a6)] px-7 text-base text-white hover:opacity-95">
                     <a href="#vendor-form">
                       Register as Vendor
                       <ArrowRight className="h-5 w-5" />
@@ -149,20 +149,20 @@ export default function AapnBazaar() {
                     asChild
                     size="lg"
                     variant="outline"
-                    className="h-12 rounded-full border-primary/20 bg-background/80 px-7 text-base"
+                    className="h-12 rounded-full border-sky-400/25 bg-white/75 px-7 text-base text-sky-700 hover:bg-white/90 dark:border-sky-400/20 dark:bg-white/10 dark:text-sky-300"
                   >
                     <a href="#app-download">Download App</a>
                   </Button>
-                  <WhatsAppButton size="lg" className="h-12 rounded-full px-7" />
+                  <WhatsAppButton size="lg" className="h-12 rounded-full border border-emerald-300/40 bg-emerald-500 px-7" />
                 </div>
 
                 <div className="grid gap-4 border-t border-border/70 pt-8 sm:grid-cols-3">
                   {stats.map((item) => (
                     <div
                       key={item.label}
-                      className="rounded-2xl border border-border/70 bg-background/75 px-5 py-4 text-center shadow-sm backdrop-blur xl:text-left"
+                      className="b2b-card rounded-2xl border border-sky-200/70 px-5 py-4 text-center shadow-[0_20px_60px_-42px_hsl(var(--foreground)/0.25)] backdrop-blur xl:text-left dark:border-sky-400/10"
                     >
-                      <div className="font-heading text-3xl font-bold text-primary">
+                      <div className="font-heading text-3xl font-bold text-sky-700 dark:text-sky-300">
                         {item.value}
                       </div>
                       <p className="mt-1 text-sm text-muted-foreground">{item.label}</p>
@@ -174,12 +174,12 @@ export default function AapnBazaar() {
                   {heroCards.map((card, index) => (
                     <motion.div
                       key={card.title}
-                      className="group rounded-[28px] border border-border/70 bg-background/82 p-5 shadow-sm backdrop-blur transition-all duration-500 hover:-translate-y-1 sm:p-6"
+                      className="b2b-card group rounded-[28px] border border-sky-200/70 p-5 shadow-[0_24px_80px_-52px_hsl(var(--foreground)/0.28)] backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-teal-300/55 hover:shadow-[0_28px_90px_-48px_rgba(20,184,166,0.24)] sm:p-6 dark:border-sky-400/10"
                       initial={{ opacity: 0, y: 22 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.45, delay: 0.22 + index * 0.1 }}
                     >
-                      <div className="aspect-[4/3] overflow-hidden rounded-[24px] border border-border/70 bg-muted/40">
+                      <div className="aspect-[4/3] overflow-hidden rounded-[24px] border border-sky-200/60 bg-sky-50/70 dark:border-sky-400/10 dark:bg-slate-900/40">
                         <img
                           src={card.image}
                           alt={card.title}
@@ -187,7 +187,13 @@ export default function AapnBazaar() {
                           loading="lazy"
                         />
                       </div>
-                      <div className="mt-5 inline-flex rounded-full border border-primary/15 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                      <div
+                        className={`mt-5 inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] ${
+                          index % 2 === 0
+                            ? 'border-sky-300/50 bg-sky-100/80 text-sky-700 dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-300'
+                            : 'border-emerald-300/50 bg-emerald-100/80 text-emerald-700 dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-300'
+                        }`}
+                      >
                         {card.tag}
                       </div>
                       <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -210,27 +216,27 @@ export default function AapnBazaar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 0.12 }}
               >
-                <div className="pointer-events-none absolute -left-8 top-8 h-24 w-24 rounded-full border border-primary/20 bg-background/70 backdrop-blur" />
-                <div className="pointer-events-none absolute -right-6 bottom-16 h-32 w-32 rounded-full border border-secondary/20 bg-background/70 backdrop-blur" />
+                <div className="pointer-events-none absolute -left-8 top-8 h-24 w-24 rounded-full border border-sky-300/20 bg-white/60 backdrop-blur" />
+                <div className="pointer-events-none absolute -right-6 bottom-16 h-32 w-32 rounded-full border border-emerald-300/20 bg-white/60 backdrop-blur" />
 
-                <div className="glass-panel relative overflow-hidden rounded-[34px] p-6 shadow-[0_30px_100px_-40px_hsl(var(--foreground)/0.45)] sm:p-8">
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
+                <div className="b2b-panel relative overflow-hidden rounded-[34px] border border-sky-200/70 p-6 shadow-[0_30px_100px_-40px_rgba(14,116,144,0.22)] sm:p-8 dark:border-sky-400/10">
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-500/60 to-transparent" />
 
                   <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border/70 pb-5">
                     <div>
-                      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary/80">
+                      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700/80 dark:text-sky-300/80">
                         AapnBazaar Trade Network
                       </p>
                       <h2 className="font-heading mt-2 text-2xl font-semibold">
                         Built for direct B2B growth across India.
                       </h2>
                     </div>
-                    <div className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                    <div className="rounded-full border border-emerald-300/40 bg-emerald-100/80 px-4 py-2 text-sm font-medium text-emerald-700 dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-300">
                       Zero middlemen
                     </div>
                   </div>
 
-                  <div className="mt-6 aspect-[16/10] overflow-hidden rounded-[30px] border border-border/70 bg-muted/40">
+                  <div className="mt-6 aspect-[16/10] overflow-hidden rounded-[30px] border border-sky-200/60 bg-sky-50/60 dark:border-sky-400/10 dark:bg-slate-900/40">
                     <img
                       src="/images/aapnbazaar/marketplace-network.svg"
                       alt="AapnBazaar trade network"
@@ -240,10 +246,10 @@ export default function AapnBazaar() {
                   </div>
 
                   <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-[28px] border border-border/70 bg-foreground p-5 text-background shadow-lg">
+                    <div className="b2b-deep-panel rounded-[28px] border border-sky-300/10 p-5 text-background shadow-lg">
                       <div className="flex items-center gap-3">
-                        <Users className="h-5 w-5 text-secondary" />
-                        <p className="text-sm uppercase tracking-[0.2em] text-background/65">
+                        <Users className="h-5 w-5 text-emerald-300" />
+                        <p className="text-sm uppercase tracking-[0.2em] text-background/68">
                           Network
                         </p>
                       </div>
@@ -256,7 +262,7 @@ export default function AapnBazaar() {
                       </p>
                     </div>
 
-                    <div className="rounded-[28px] border border-border/70 bg-background/82 p-5 backdrop-blur">
+                    <div className="b2b-soft rounded-[28px] border border-emerald-200/70 p-5 backdrop-blur dark:border-emerald-400/10">
                       <div className="flex items-center gap-3">
                         <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
                           Marketplace signals
@@ -268,8 +274,8 @@ export default function AapnBazaar() {
                             key={signal}
                             className={`inline-flex rounded-full border px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] ${
                               index % 2 === 0
-                                ? 'border-primary/20 bg-primary/10 text-primary'
-                                : 'border-secondary/20 bg-secondary/10 text-secondary'
+                                ? 'border-sky-300/40 bg-sky-100/75 text-sky-700 dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-300'
+                                : 'border-emerald-300/40 bg-emerald-100/75 text-emerald-700 dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-300'
                             }`}
                           >
                             {signal}
@@ -279,9 +285,9 @@ export default function AapnBazaar() {
                     </div>
                   </div>
 
-                  <div className="mt-6 rounded-[30px] border border-border/70 bg-background/82 p-6 backdrop-blur">
+                  <div className="b2b-soft mt-6 rounded-[30px] border border-sky-200/70 p-6 backdrop-blur dark:border-sky-400/10">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/15 text-secondary">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100/80 text-emerald-700 dark:bg-emerald-400/10 dark:text-emerald-300">
                         <ShieldCheck className="h-6 w-6" />
                       </div>
                       <div>
@@ -300,8 +306,8 @@ export default function AapnBazaar() {
                           key={signal}
                           className={`rounded-2xl border px-4 py-4 text-sm font-medium ${
                             index % 2 === 0
-                              ? 'border-primary/20 bg-primary/5 text-foreground'
-                              : 'border-secondary/20 bg-secondary/5 text-foreground'
+                              ? 'border-sky-300/35 bg-sky-100/65 text-foreground dark:border-sky-400/15 dark:bg-sky-400/10'
+                              : 'border-emerald-300/35 bg-emerald-100/65 text-foreground dark:border-emerald-400/15 dark:bg-emerald-400/10'
                           }`}
                         >
                           {signal}
@@ -316,7 +322,7 @@ export default function AapnBazaar() {
         </section>
 
         <section className="relative overflow-hidden py-20 xl:py-28">
-          <div className="absolute inset-0 bg-muted/35" />
+          <div className="b2b-soft absolute inset-0" />
           <div className="surface-grid absolute inset-0 opacity-25" />
 
           <div className="container relative px-4">
@@ -327,7 +333,7 @@ export default function AapnBazaar() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/85 px-4 py-2 text-sm font-semibold text-primary backdrop-blur">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-400/25 bg-white/80 px-4 py-2 text-sm font-semibold text-sky-700 backdrop-blur dark:border-sky-400/20 dark:bg-white/10 dark:text-sky-300">
                 <PackageCheck className="h-4 w-4" />
                 Why Choose Aapnbazaar?
               </div>
@@ -345,13 +351,13 @@ export default function AapnBazaar() {
               {whyChooseItems.map((item, index) => (
                 <motion.div
                   key={item.title}
-                  className="group rounded-[30px] border border-border/70 bg-background/88 p-5 shadow-[0_24px_80px_-52px_hsl(var(--foreground)/0.45)] backdrop-blur transition-all duration-500 hover:-translate-y-1 sm:p-6"
+                  className="b2b-card group rounded-[30px] border border-sky-200/70 p-5 shadow-[0_24px_80px_-52px_rgba(14,116,144,0.18)] backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:border-emerald-300/55 hover:shadow-[0_28px_90px_-48px_rgba(16,185,129,0.2)] sm:p-6 dark:border-sky-400/10"
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.06 }}
                   viewport={{ once: true }}
                 >
-                  <div className="aspect-[16/10] overflow-hidden rounded-[24px] border border-border/70 bg-muted/40">
+                  <div className="aspect-[16/10] overflow-hidden rounded-[24px] border border-sky-200/60 bg-sky-50/60 dark:border-sky-400/10 dark:bg-slate-900/40">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -359,7 +365,13 @@ export default function AapnBazaar() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="mt-5 inline-flex rounded-full border border-primary/15 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                  <div
+                    className={`mt-5 inline-flex rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] ${
+                      index % 2 === 0
+                        ? 'border-sky-300/45 bg-sky-100/80 text-sky-700 dark:border-sky-400/20 dark:bg-sky-400/10 dark:text-sky-300'
+                        : 'border-emerald-300/45 bg-emerald-100/80 text-emerald-700 dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-300'
+                    }`}
+                  >
                     {item.tag}
                   </div>
                   <h3 className="font-heading mt-5 text-2xl font-semibold">{item.title}</h3>
