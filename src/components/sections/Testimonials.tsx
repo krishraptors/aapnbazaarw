@@ -87,19 +87,6 @@ export default function Testimonials() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="inline-flex items-center gap-2 bg-primary/10 px-6 py-3 rounded-full">
-            <Star className="h-5 w-5 text-primary" />
-            <span className="font-medium">4.9/5 Average Rating from 200+ Reviews</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

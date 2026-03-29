@@ -6,13 +6,6 @@ import { cn } from '@/lib/utils';
 
 const ServicesShowcase = lazy(() => import('@/components/sections/ServicesShowcase'));
 const Features = lazy(() => import('@/components/sections/Features'));
-const MyProductsShowcase = lazy(() => import('@/components/sections/MyProductsShowcase'));
-const GolaMartShowcase = lazy(() => import('@/components/sections/GolaMartShowcase'));
-const GlobalServices = lazy(() => import('@/components/sections/GlobalServices'));
-const Testimonials = lazy(() => import('@/components/sections/Testimonials'));
-const HowItWorks = lazy(() => import('@/components/sections/HowItWorks'));
-const VendorForm = lazy(() => import('@/components/sections/VendorForm'));
-const AppDownload = lazy(() => import('@/components/sections/AppDownload'));
 const Contact = lazy(() => import('@/components/sections/Contact'));
 const Footer = lazy(() => import('@/components/sections/Footer'));
 
@@ -53,14 +46,7 @@ export default function Home() {
       <Suspense fallback={<HomeSectionFallback minHeightClassName="min-h-[980px]" />}>
         <ServicesShowcase />
       </Suspense>
-      {renderSection(<Features />, 'min-h-[640px]')}
-      {renderSection(<MyProductsShowcase />, 'min-h-[860px]')}
-      {renderSection(<GolaMartShowcase />, 'min-h-[760px]')}
-      {renderSection(<GlobalServices />, 'min-h-[620px]')}
-      {renderSection(<Testimonials />, 'min-h-[520px]')}
-      {renderSection(<HowItWorks />, 'min-h-[540px]')}
-      {renderSection(<VendorForm />, 'min-h-[680px]')}
-      {renderSection(<AppDownload />, 'min-h-[480px]')}
+      {renderSection(<Features />, 'min-h-[560px]')}
       {renderSection(<Contact />, 'min-h-[640px]')}
       {renderSection(<Footer />, 'min-h-[220px]')}
     </div>

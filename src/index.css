@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
 /* stylelint-disable */
 @tailwind base;
@@ -12,8 +12,8 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --radius: 0.5rem;
-    --font-body: 'Manrope', sans-serif;
-    --font-heading: 'Space Grotesk', 'Manrope', sans-serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-heading: 'IBM Plex Sans', sans-serif;
     --background: 220 40% 99%;
     --foreground: 228 42% 12%;
     --card: 0 0% 100%;

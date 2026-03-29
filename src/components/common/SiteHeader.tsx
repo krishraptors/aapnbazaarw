@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 import ThemeToggle from '@/components/common/ThemeToggle';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { label: 'Home', href: '/#home' },
   { label: 'Solutions', href: '/#solutions' },
-  { label: 'My Products', href: '/#my-products' },
-  { label: 'Global Reach', href: '/#global-services' },
-  { label: 'GolaMart', href: '/my-product' },
+  { label: 'AapnBazaar', href: '/aapnbazaar' },
+  { label: 'Startups', href: '/startups' },
   { label: 'Contact', href: '/#contact' },
 ];
 
@@ -70,15 +68,6 @@ export default function SiteHeader() {
 
           <div className="hidden items-center gap-3 xl:flex">
             <ThemeToggle />
-            <Button asChild variant="outline" className="rounded-full border-primary/20 bg-background/80">
-              <a href="/admin/golamart">Admin</a>
-            </Button>
-            <Button asChild className="rounded-full px-6 shadow-lg shadow-primary/20">
-              <a href="/my-product">
-                Open GolaMart
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </Button>
           </div>
 
           <button
@@ -110,18 +99,8 @@ export default function SiteHeader() {
                 </a>
               ))}
             </nav>
-            <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <div className="mt-4">
               <ThemeToggle className="w-full" />
-              <Button asChild variant="outline" className="rounded-full">
-                <a href="/admin/golamart" onClick={() => setIsOpen(false)}>
-                  Admin Dashboard
-                </a>
-              </Button>
-              <Button asChild className="rounded-full">
-                <a href="/my-product" onClick={() => setIsOpen(false)}>
-                  Open GolaMart
-                </a>
-              </Button>
             </div>
           </div>
         ) : null}

@@ -7,23 +7,21 @@ export default function Footer() {
     company: [
       { name: 'Home', href: '/#home' },
       { name: 'Solutions', href: '/#solutions' },
-      { name: 'My Products', href: '/#my-products' },
-      { name: 'GolaMart', href: '/my-product' },
-      { name: 'Global Reach', href: '/#global-services' },
+      { name: 'AapnBazaar', href: '/aapnbazaar' },
       { name: 'Contact', href: '/#contact' }
     ],
     support: [
       { name: 'Contact Us', href: '/#contact' },
-      { name: 'My Products', href: '/#my-products' },
-      { name: 'GolaMart', href: '/my-product' },
-      { name: 'Admin Dashboard', href: '/admin/golamart' },
+      { name: 'AapnBazaar', href: '/aapnbazaar' },
+      { name: 'Vendor Registration', href: '/aapnbazaar#vendor-form' },
       { name: 'WhatsApp Support', href: 'https://wa.me/918294886251' }
     ],
     business: [
-      { name: 'AapnBazaar Marketplace', href: '/#product-AapnBazaar' },
-      { name: 'GolaMart Agritech', href: '/my-product' },
-      { name: 'Global Delivery', href: '/#global-services' },
-      { name: 'Vendor Registration', href: '/#contact' }
+      { name: 'AapnBazaar Marketplace', href: '/aapnbazaar' },
+      { name: 'Service Overview', href: '/#solutions' },
+      { name: 'Consulting', href: '/#consulting' },
+      { name: 'Capabilities', href: '/#capabilities' },
+      { name: 'Vendor Registration', href: '/aapnbazaar#vendor-form' }
     ]
   };
 

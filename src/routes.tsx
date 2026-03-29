@@ -1,6 +1,8 @@
 import { lazy, type ComponentType } from 'react';
 
 const Home = lazy(() => import('./pages/Home'));
+const AapnBazaar = lazy(() => import('./pages/AapnBazaar'));
+const Startups = lazy(() => import('./pages/Startups'));
 const MyProduct = lazy(() => import('./pages/MyProduct'));
 const AdminGolaMart = lazy(() => import('./pages/AdminGolaMart'));
 
@@ -16,6 +18,18 @@ const routes: RouteConfig[] = [
     name: 'Home',
     path: '/',
     component: Home,
+    visible: true,
+  },
+  {
+    name: 'AapnBazaar',
+    path: '/aapnbazaar',
+    component: AapnBazaar,
+    visible: true,
+  },
+  {
+    name: 'Startups',
+    path: '/startups',
+    component: Startups,
     visible: true,
   },
   {

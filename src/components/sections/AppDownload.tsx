@@ -104,6 +104,17 @@ export default function AppDownload() {
                     Available for Android devices
                   </p>
                 </div>
+
+                <div className="rounded-2xl bg-primary/10 px-4 py-3 text-center">
+                  <div className="flex items-center justify-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="mt-2 text-sm font-medium text-foreground">
+                    4.9/5 Average Rating from 200+ Reviews
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
