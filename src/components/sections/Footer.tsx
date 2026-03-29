@@ -27,6 +27,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Mail, href: 'mailto:kmk@aapnbazaar.com', label: 'Email' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Instagram, href: 'https://www.instagram.com/aapnbazaar/', label: 'Instagram' },
     { icon: Linkedin, href: 'https://www.linkedin.com/company/aapnbazaar', label: 'LinkedIn' }
