@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import QRCodeDataUrl from '@/components/ui/qrcodedataurl';
 import { Smartphone, Star, Download, CheckCircle } from 'lucide-react';
 
 const appFeatures = [
@@ -91,10 +90,13 @@ export default function AppDownload() {
                 {/* QR Code */}
                 <div className="flex justify-center">
                   <div className="p-4 bg-white rounded-xl">
-                    <QRCodeDataUrl
-                      text={playStoreUrl}
+                    <img
+                      src="/images/aapnbazaar/app-download-qr.svg"
+                      alt="QR code for AapnBazaar app download"
                       width={200}
-                      className="w-full h-auto"
+                      height={200}
+                      className="h-auto w-full"
+                      loading="lazy"
                     />
                   </div>
                 </div>
